@@ -1,0 +1,5 @@
+#! /bin/csh -f
+source /user1/cae_admin/com/msim_v6.4c.csh
+vcom 7seg.vhd
+vlog 7seg_tb.v
+vsim 7seg_tb.v
