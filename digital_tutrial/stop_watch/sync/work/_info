@@ -2,33 +2,62 @@ m255
 K3
 13
 cModel Technology
-Z0 d/user4/kume/ms_sim/stop_watch/sync
+Z0 d/home/kume/FPGA_study/digital_tutrial/stop_watch/sync
 Esync
-Z1 w1617593629
-Z2 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
-Z3 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
-Z4 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z5 8sync.vhd
-Z6 Fsync.vhd
+Z1 w1617893486
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 d/home/kume/FPGA_study/digital_tutrial/stop_watch/sync
+Z7 8sync.vhd
+Z8 Fsync.vhd
 l0
 L5
-VZgoi6FAhUdgzk56]cPRD^3
-!s100 YVTGBNcnD<]I^U>KnA5k[2
-Z7 OE;C;6.4c;39
+VdLEQ=_`POHa`lAYelWG?P1
+!s100 8:2<@UWA=im^lER>cn91;2
+Z9 OV;C;10.1d;51
 32
-Z8 tExplicit 1 CoverMaxUDPRows 1000000 CoverMaxFECRows 1000000
+!i10b 1
+Z10 !s108 1617895154.318624
+Z11 !s90 sync.vhd|
+Z12 !s107 sync.vhd|
+o-O0
+Z13 tExplicit 1
 Artl
 R2
 R3
 R4
-DEx4 work 4 sync 0 22 Zgoi6FAhUdgzk56]cPRD^3
+R5
+Z14 DEx4 work 4 sync 0 22 dLEQ=_`POHa`lAYelWG?P1
 l32
 L17
-V1k9>@KB3bT]FD6DRSa8BT2
-!s100 0cN6L68`iE7hM0ed37?1o0
-R7
+Z15 VWJ58oXH6_<;:cK7Pb[5WP1
+Z16 !s100 g_:aX86UC`:YYadGaAb7j2
+R9
 32
-Z9 Mx3 4 ieee 14 std_logic_1164
-Z10 Mx2 4 ieee 18 std_logic_unsigned
-Z11 Mx1 4 ieee 15 std_logic_arith
-R8
+!i10b 1
+R10
+R11
+R12
+o-O0
+R13
+vsync_tb
+!s100 86PI9[8f5IAN:h@AMHYHL2
+I5KAkNLU6X=[gn<l9]Sk`[3
+VYm4>Zi?C?2hkVbjlM^0B<1
+R6
+w1617894603
+8sync_tb.v
+Fsync_tb.v
+L0 1
+Z17 OV;L;10.1d;51
+r1
+31
+o-O0
+!i10b 1
+!s85 0
+!s108 1617894604.972844
+!s107 sync_tb.v|
+!s90 sync_tb.v|
+!s101 -O0
