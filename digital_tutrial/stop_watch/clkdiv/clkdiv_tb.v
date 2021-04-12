@@ -11,6 +11,8 @@ wire	O_EN_1MS;
 clkdiv clkdiv(
 	.I_CLK	(I_CLK),
 	.I_RSTN	(I_RSTN),
+	.I_CLEAR_EN (I_CLEAR_EN),
+	.I_START_EN (I_START_EN),
 	.O_EN_1MS (O_EN_1MS)
 	);
 
@@ -21,8 +23,17 @@ end
 initial begin
 	I_RSTN = 0;
 	I_CLK=0;
+	I_CLEAR_EN = 0;
+	I_START_EN = 0;
 	#100
 	I_RSTN = 1;
+	I_START_EN = 1;
+	#100
+	I_CLEAR_EN = 1;
+	#110
+	I_CLEAR_EN = 0;
+	#120
+	I_CLEAR_EN = 1;
 	#(100*CYCLE) $finish;
 end
 
