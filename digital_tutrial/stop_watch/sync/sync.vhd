@@ -8,7 +8,7 @@ entity sync is
     I_CLK      :   in std_logic;
     I_START_EN :   in std_logic;
     I_CLR_EN   :   in std_logic;
-    I_RSTN    :   in std_logic;
+    I_RSTN     :   in std_logic;
     O_START_EN :  out std_logic;
     O_CLR_EN   :  out std_logic
     );
@@ -19,23 +19,24 @@ architecture RTL of sync is
   signal start_en1_reg      : std_logic;
   signal start_en2_reg      : std_logic;
   signal start_en1_equal_en2_w         : std_logic;
-  signal start_buf1_w        : std_logic;
-  signal start_buf1_reg      : std_logic;     -- out enable start
-  signal start_buf2_reg      : std_logic;     -- out enable start
-  signal start_up_edge_w     : std_logic;
-  signal start_en_buf         : std_logic;  
+  signal start_buf1_w       : std_logic;
+  signal start_buf1_reg     : std_logic;     -- out enable start
+  signal start_buf2_reg     : std_logic;     -- out enable start
+  signal start_up_edge_w    : std_logic;
+  signal start_en_buf       : std_logic;  
   signal start_en_reg       : std_logic;     -- out enable start
-  signal start_up_edge_reg : std_logic;
+  signal start_up_edge_reg  : std_logic;
   signal clear_en1_reg      : std_logic;
   signal clear_en2_reg      : std_logic;
   signal clear_en_w         : std_logic;
-  signal clear_buf_w            : std_logic;
+  signal clear_buf_w        : std_logic;
+  signal clear_out_buf_w    : std_logic;
   signal clear_en_reg       : std_logic;     -- out enable clear
   
     begin  -- RTL
 
      O_START_EN  <= start_en_reg;
-     O_CLR_EN    <= clear_en_reg;
+     O_CLR_EN    <= clear_out_buf_w;
 
        process (I_CLK, I_RSTN) begin
          if (I_RSTN  ='0')then
@@ -121,5 +122,7 @@ architecture RTL of sync is
            clear_en_reg  <=  clear_buf_w;
          end if;
        end process;              
-     
+    
+       clear_out_buf_w <= clear_en_reg and not start_en_reg
+    
     end RTL;    

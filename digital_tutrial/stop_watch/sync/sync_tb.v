@@ -31,15 +31,19 @@ initial begin
         #1
         I_START_EN = 1;
         #5
-	I_START_EN = 0;
+	    I_START_EN = 0;
         I_CLR_EN =1;
         #10
         I_START_EN =1;
         #10
         I_START_EN = 0;
         I_CLR_EN =0;
+		#10
+        I_START_EN = 1;
+		#10
+        I_CLR_EN =1;
    
-    	#(100*CYCLE) $finish;
+    	#(20*CYCLE) $finish;
 end
 
 endmodule
