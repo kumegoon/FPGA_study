@@ -36,7 +36,7 @@ architecture RTL of TIMER_COUNTER is
 
         O_TIMER_MS  <= timer_ms_reg;
         O_TIMER_SEC <= timer_sec_reg;
-        clear_en_w <= I_CLEAR_EN and not I_START_EN;
+        clear_en_w <= I_CLEAR_EN;
 
 
     -- timer ms reg 
