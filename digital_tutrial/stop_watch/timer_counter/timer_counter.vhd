@@ -44,7 +44,7 @@ architecture RTL of TIMER_COUNTER is
         timer_ms_buf3 <= timer_ms_buf2 when I_START_EN = '1'    else timer_ms_reg ;
         timer_ms_buf2 <= timer_ms_buf1 when I_EN_1MS ='1'       else timer_ms_reg ;
       -- timer_ms_regが1000でリセット
-        timer_ms_buf1 <= "0000000000"  when ( timer_ms_reg = "1111101000" ) else timer_ms_reg + 1;
+        timer_ms_buf1 <= "0000000000"  when ( timer_ms_reg = "1111100111" ) else timer_ms_reg + 1;
 
         process (I_CLK, I_RSTN) begin
             if (I_RSTN  ='0')then
@@ -60,7 +60,7 @@ architecture RTL of TIMER_COUNTER is
         timer_sec_buf2 <= timer_sec_buf1 when I_EN_1MS = '1' else timer_sec_reg;
         -- timer_sec_regが60でリセット
         timer_sec_buf1 <= "000000" when timer_sec_reg =  "111100" else
-                          timer_sec_reg + 1 when timer_ms_reg = "1111101000" else
+                          timer_sec_reg + 1 when timer_ms_reg = "1111100111" else
                           timer_sec_reg;
         
     process (I_CLK, I_RSTN) begin

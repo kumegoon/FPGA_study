@@ -18,15 +18,17 @@ architecture RTL of sync is
 
   signal start_en1_reg      : std_logic;
   signal start_en2_reg      : std_logic;
-  signal start_en1_and_en2_w         : std_logic;
-  signal start_buf_w        : std_logic;
-  signal start_buf_reg   : std_logic;     -- out enable start
-  signal start_en_w            : std_logic;
+  signal start_en1_equal_en2_w         : std_logic;
+  signal start_buf1_w        : std_logic;
+  signal start_buf1_reg      : std_logic;     -- out enable start
+  signal start_buf2_reg      : std_logic;     -- out enable start
+  signal start_up_edge_w     : std_logic;
+  signal start_en_buf         : std_logic;  
   signal start_en_reg       : std_logic;     -- out enable start
   signal clear_en1_reg      : std_logic;
   signal clear_en2_reg      : std_logic;
   signal clear_en_w         : std_logic;
-  signal clear_w            : std_logic;
+  signal clear_buf_w            : std_logic;
   signal clear_en_reg       : std_logic;     -- out enable clear
   
     begin  -- RTL
@@ -50,26 +52,43 @@ architecture RTL of sync is
          end if;
        end process;           
 
-     start_en1_and_en2_w  <=  '1' when(start_en1_reg = start_en2_reg) else '0';
-     start_buf_w     <=  start_buf_reg when(start_en1_and_en2_w = '1') else start_en_reg;
+     start_en1_equal_en2_w  <=  '1' when(start_en1_reg = start_en2_reg) else '0';
+     start_buf1_w     <=  start_en2_reg when(start_en1_equal_en2_w = '1') else start_buf1_reg;
 
        process (I_CLK, I_RSTN) begin
          if (I_RSTN  ='0')then
-           start_buf_reg  <=  '0';
+           start_buf1_reg  <=  '0';
          elsif (I_CLK'event and I_CLK='1') then
-           start_buf_reg  <= start_buf_w;
+           start_buf1_reg  <= start_buf1_w;
          end if;
        end process;                
 
        process (I_CLK, I_RSTN) begin
+         if (I_RSTN  ='0')then
+           start_buf2_reg  <=  '0';
+         elsif (I_CLK'event and I_CLK='1') then
+           start_buf2_reg  <= start_buf1_reg;
+         end if;
+       end process;
+
+
+      start_up_edge_w <= not start_buf2_reg and start_buf1_reg;
+
+       process (I_CLK, I_RSTN) begin
+         if (I_RSTN  ='0')then
+           start_up_edge_reg  <=  '0';
+         elsif (I_CLK'event and I_CLK='1') then
+           start_up_edge_reg  <= start_up_edge_w;
+         end if;
+       end process;     
+
+      start_en_buf <= not start_en_reg when (start_up_edge_reg ='1') else start_en_reg;
+        
+       process (I_CLK, I_RSTN) begin
         if (I_RSTN  ='0')then
           start_en_reg  <=  '0';
         elsif (I_CLK'event and I_CLK='1') then
-            if(start_buf_reg = '0')
-              start_en_w  <= start_en_reg;
-            elsif(start_buf_reg = '1')
-              start_en_w  <= not start_en_reg;
-            end if;
+          start_en_reg <= start_en_buf;
         end if;
       end process; 
 
@@ -92,13 +111,13 @@ architecture RTL of sync is
        end process;           
 
      clear_en_w  <=  '1' when(clear_en1_reg = clear_en2_reg) else '0';
-     clear_w     <=  clear_en2_reg when(clear_en_w = '1') else clear_en_reg;
+     clear_buf_w     <=  clear_en2_reg when(clear_en_w = '1') else clear_en_reg;
 
        process (I_CLK, I_RSTN) begin
          if (I_RSTN  ='0')then
            clear_en_reg  <=  '0';
          elsif (I_CLK'event and I_CLK='1') then
-           clear_en_reg  <=  clear_en_w;
+           clear_en_reg  <=  clear_buf_w;
          end if;
        end process;              
      

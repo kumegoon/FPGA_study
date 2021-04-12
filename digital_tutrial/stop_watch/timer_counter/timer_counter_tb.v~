@@ -48,7 +48,7 @@ initial begin
 	#DELAY
 	I_RSTN = 1;
 	I_START_EN = 1;
-	#60000000000 $finish;
+	#(500000000*CYCLE) $finish;
 end
 
 endmodule

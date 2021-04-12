@@ -8,9 +8,33 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-vlib work
-wxit
-# invalid command name "wxit"
-wxit
-# invalid command name "wxit"
-exit
+# OpenFile timer_counter_tb_6p25ns_clk.v 
+vsim work.timer_counter_tb
+# vsim work.timer_counter_tb 
+# Loading work.timer_counter_tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_counter(rtl)
+view wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25ns_clk.v(51)
+#    Time: 60000100 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25ns_clk.v line 51
+view wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
+view wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf

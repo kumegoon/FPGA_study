@@ -7,6 +7,8 @@ entity CLKDIV is
   port (
     I_CLK      :   in std_logic;
     I_RSTN    :   in std_logic;
+    I_START_EN:  in std_logic;
+    I_CLR_EN : in std_logic
     O_EN_1MS   :  out std_logic
     );
   
@@ -24,7 +26,7 @@ architecture RTL of CLKDIV is
         O_EN_1MS <= en_1ms_reg;
 
     -- counter limit 13
-        counter_1ms_w <= "0000" when ( counter_1ms_reg = "1011" )
+        counter_1ms_w <= "0000" when ( counter_1ms_reg = "1111" )
                         else  counter_1ms_reg + 1;
         
     -- counter reg 
@@ -37,7 +39,7 @@ architecture RTL of CLKDIV is
         end process;
 
     -- enble
-        en_1ms_w <= '1' when (counter_1ms_reg = "1011") else '0';
+        en_1ms_w <= '1' when (counter_1ms_reg = "1111") else '0';
                     
     -- output en
         process (I_CLK, I_RSTN) begin

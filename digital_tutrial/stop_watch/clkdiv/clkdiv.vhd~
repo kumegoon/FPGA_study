@@ -14,40 +14,37 @@ end CLKDIV;
 
 architecture RTL of CLKDIV is
 
-    signal 1ms_counter_reg      : std_logic_vector(3 downto 0);
     signal en_1ms_reg           : std_logic;
     signal en_1ms_w             : std_logic;
+    signal counter_1ms_w        : std_logic_vector(3 downto 0);
+    signal counter_1ms_reg      : std_logic_vector(3 downto 0);
     
     begin  -- RTL of CLKDIV
 
         O_EN_1MS <= en_1ms_reg;
 
+    -- counter limit 13
+        counter_1ms_w <= "0000" when ( counter_1ms_reg = "1111" )
+                        else  counter_1ms_reg + 1;
+        
     -- counter reg 
         process (I_CLK, I_RSTN) begin
             if (I_RSTN  ='0')then
-                1ms_counter_reg  <=  '0000';
+                counter_1ms_reg  <=  "0000";
             elsif (I_CLK'event and I_CLK='1') then
-                if( 1ms_counter_reg = '1011') then    -- 13でリセット
-                    1ms_counter_reg  <= '0000' ;
-                else 
-                    1ms_counter_reg  <= 1ms_counter_reg + 1 ;
-                end if;
+                counter_1ms_reg  <= counter_1ms_w ;
             end if;
         end process;
 
     -- enble
-        if (1ms_counter_reg = '1011') then
-            en_1ms_w <= '1';
-        else
-            en_1ms_w <= '0';
-        end if;           
-
+        en_1ms_w <= '1' when (counter_1ms_reg = "1111") else '0';
+                    
     -- output en
         process (I_CLK, I_RSTN) begin
             if (I_RSTN  ='0')then
                 en_1ms_reg  <=  '0';
             elsif (I_CLK'event and I_CLK='1') then
                 en_1ms_reg <= en_1ms_w;
-            end if
-        end process
+            end if;
+        end process;
 end RTL;
