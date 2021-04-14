@@ -3,9 +3,9 @@ module clkdiv_tb;
 // parameter define
 parameter CYCLE 	= 62500;		// 0.0625us
 parameter HALF_CYCLE 	= CYCLE/2;		// 0.0625/2us 
-parameter DELAY = 100;
 
-reg	I_RSTN, I_CLK;
+
+reg	I_RSTN, I_CLK, I_START_EN, I_CLEAR_EN;
 wire	O_EN_1MS;
 
 clkdiv clkdiv(
@@ -22,19 +22,19 @@ end
 
 initial begin
 	I_RSTN = 0;
-	I_CLK=0;
+	I_CLK=1;
 	I_CLEAR_EN = 0;
 	I_START_EN = 0;
-	#100
+	#(10*CYCLE)
 	I_RSTN = 1;
 	I_START_EN = 1;
-	#100
+	#(16*CYCLE)
 	I_CLEAR_EN = 1;
-	#110
+	#(20*CYCLE)
 	I_CLEAR_EN = 0;
-	#120
+	#(60*CYCLE)
 	I_CLEAR_EN = 1;
-	#(100*CYCLE) $finish;
+	#(15*CYCLE) $finish;
 end
 
 endmodule

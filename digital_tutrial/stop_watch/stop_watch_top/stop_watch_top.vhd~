@@ -52,28 +52,30 @@ entity STOP_WATCH_TOP is
             );
     end component;
     
-    signal  clock         :   std_logic;
-    signal  resn          :   std_logic;
-    signal  start_en      :   std_logic;
-    signal  clear_en      :   std_logic;
+    signal  i_clock         :   std_logic;
+    signal  i_resn          :   std_logic;
+    signal  i_start_en      :   std_logic;
+    signal  i_clear_en      :   std_logic;
     signal  sync_o_start_en :   std_logic;
     signal  sync_o_clear_en :   std_logic;
     signal  en_1ms          :   std_logic;
-    signal  timer_ms      :   std_logic_vector(9 downto 0);
-    signal  timer_sec     :   std_logic_vector(5 downto 0);
+    signal  o_timer_ms      :   std_logic_vector(9 downto 0);
+    signal  o_timer_sec     :   std_logic_vector(5 downto 0);
 
 begin
-    clock     <=  I_CLK;
-    resn      <=  I_RESN;
-    start_en  <=  I_EN1;
-    clear_en  <=  I_EN2;
-    O_TIMER_MS  <=  timer_ms;
-    O_TIMER_SEC <=  timer_sec;
+    i_clock     <=  I_CLK;
+    i_resn      <=  I_RESN;
+    i_start_en  <=  I_EN1;
+    i_clear_en  <=  I_EN2;
+
+    O_EN_1MS    <=  en_1ms;
+    O_TIMER_MS  <=  o_timer_ms;
+    O_TIMER_SEC <=  o_timer_sec;
 
     U_CLKDIV: CLKDIV
     port map(
-        I_CLK       =>  clock,      
-        I_RSTN      =>  resn,
+        I_CLK       =>  i_clock,      
+        I_RSTN      =>  i_resn,
         I_CLEAR_EN  =>  sync_o_clear_en,
         I_START_EN  =>  sync_o_start_en,
         O_EN_1MS    =>  en_1ms
@@ -81,23 +83,23 @@ begin
 
     U_SYNC: SYNC
     port map(
-        I_CLK       =>  clock,
-        I_START_EN  =>  start_en,
-        I_CLR_EN    =>  clear_en,
-        I_RSTN      =>  resn,
-        O_START_EN  =>  sync_o_start_en,
-        O_CLR_EN    =>  sync_o_clear_en
+        I_CLK       =>  i_clock,
+        I_START_EN  =>  i_start_en,
+        I_CLR_EN    =>  i_clear_en,
+        I_RSTN      =>  i_resn,
+        O_START_EN  =>  sync_o_clear_en,
+        O_CLR_EN    =>  sync_o_start_en
     );
 
     U_TIMER_COUNTER: TIMER_COUNTER
     port map(
-        I_CLK       =>  clock,
-        I_RSTN      =>  resn,
+        I_CLK       =>  i_clock,
+        I_RSTN      =>  i_resn,
         I_EN_1MS    =>  en_1ms,
         I_CLEAR_EN  =>  sync_o_clear_en,
         I_START_EN  =>  sync_o_start_en,
-        O_TIMER_MS  =>  timer_ms,
-        O_TIMER_SEC =>  timer_sec
+        O_TIMER_MS  =>  o_timer_ms,
+        O_TIMER_SEC =>  o_timer_sec
     );
 
 end;

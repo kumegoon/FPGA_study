@@ -25,12 +25,12 @@ architecture RTL of CLKDIV is
     
     begin  -- RTL of CLKDIV
 
-        O_EN_1MS <= en_1ms_reg;
+        O_EN_1MS <= en_1ms_w;
 
     -- counter limit 14
-        counter_1ms_buf3 <= "0000" when ( I_CLEAR_EN = '1' ) else counter_1ms_buf2
-        counter_1ms_buf2 <= counter_1ms_buf1 when ( I_START_EN = '1' ) else counter_1ms_reg
-        counter_1ms_buf1 <= "0000"  when ( counter_1ms_reg = "1110" ) else counter_1ms_reg + 1;
+        counter_1ms_buf3 <= "0000" when ( I_CLEAR_EN = '1' ) else counter_1ms_buf2;
+        counter_1ms_buf2 <= counter_1ms_buf1 when ( I_START_EN = '1' ) else counter_1ms_reg;
+        counter_1ms_buf1 <= "0000"  when ( counter_1ms_reg = "1111" ) else counter_1ms_reg + 1;
         
     -- counter reg 
         process (I_CLK, I_RSTN) begin
@@ -42,14 +42,14 @@ architecture RTL of CLKDIV is
         end process;
 
     -- enble 14clk
-        en_1ms_w <= '1' when (counter_1ms_reg = "1110") else '0';
+        en_1ms_w <= '1' when (counter_1ms_reg = "1111") else '0';
                     
     -- output en 15clk
-        process (I_CLK, I_RSTN) begin
-            if (I_RSTN  ='0')then
-                en_1ms_reg  <=  '0';
-            elsif (I_CLK'event and I_CLK='1') then
-                en_1ms_reg <= en_1ms_w;
-            end if;
-        end process;
+--        process (I_CLK, I_RSTN) begin
+--            if (I_RSTN  ='0')then
+--                en_1ms_reg  <=  '0';
+--            elsif (I_CLK'event and I_CLK='1') then
+--                en_1ms_reg <= en_1ms_w;
+--            end if;
+--        end process;
 end RTL;

@@ -1,0 +1,5 @@
+../clkdiv/clkdiv.vhd 
+../sync/sync.vhd 
+../timer_counter/timer_counter.vhd 
+./stop_watch_top.vhd 
+	

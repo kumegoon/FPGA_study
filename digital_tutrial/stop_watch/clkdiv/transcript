@@ -9,3 +9,25 @@
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
 # OpenFile clkdiv_tb.v 
+vsim work.clkdiv_tb
+# vsim work.clkdiv_tb 
+# Loading work.clkdiv_tb
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.clkdiv(rtl)
+do wave.do
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /clkdiv_tb/clkdiv
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /clkdiv_tb/clkdiv
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /clkdiv_tb/clkdiv
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /clkdiv_tb/clkdiv
+# ** Note: $finish    : clkdiv_tb.v(37)
+#    Time: 7562500 ns  Iteration: 0  Instance: /clkdiv_tb
+# 1
+# Break in Module clkdiv_tb at clkdiv_tb.v line 37
