@@ -25,12 +25,24 @@ end
 initial begin
 	I_RSTN = 0;
 	I_CLK=1;
-	#(10*CYCLE)
+        I_EN2 = 0;
+   	#(10*CYCLE)
 	I_RSTN = 1;
 	I_EN1 = 1;
-	#(20*CYCLE)
-	I_EN2 = 1;
+        #(1000*CYCLE)
+        I_EN1 = 0;
         #(100*CYCLE)
+        I_EN1= 1;
+        #(1000*CYCLE)
+        I_EN1=0;
+        I_EN2=1;
+        #(100*CYCLE)
+        I_EN1=1;
+        I_EN2=0;
+        #(10000*CYCLE)
+        I_RSTN=1;
+        #(100*CYCLE)
+          
         $finish;
    
 end

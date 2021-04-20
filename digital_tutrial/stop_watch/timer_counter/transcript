@@ -8,7 +8,7 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# OpenFile timer_counter_tb_6p25ns_clk.v 
+# OpenFile timer_counter_tb_6p25maikurosec_clk.v 
 vsim work.timer_counter_tb
 # vsim work.timer_counter_tb 
 # Loading work.timer_counter_tb
@@ -30,11 +30,322 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
-# ** Note: $finish    : timer_counter_tb_6p25ns_clk.v(51)
-#    Time: 60000100 ns  Iteration: 0  Instance: /timer_counter_tb
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 1322384912 ns  Iteration: 0  Instance: /timer_counter_tb
 # 1
-# Break in Module timer_counter_tb at timer_counter_tb_6p25ns_clk.v line 51
-view wave
-# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
-view wave
-# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+vlog timer_counter_tb_6p25maikurosec_clk.v
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+restart
+# Loading work.timer_counter_tb
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 2770722320 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 277072232 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!ru
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 818030952 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!ru
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 871082856 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!run
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 2432129384 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!run
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Note: $finish    : timer_counter_tb_6p25maikurosec_clk.v(51)
+#    Time: 2840832360 ns  Iteration: 0  Instance: /timer_counter_tb
+# 1
+# Break in Module timer_counter_tb at timer_counter_tb_6p25maikurosec_clk.v line 51
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# ** Error: timer_counter_tb_6p25maikurosec_clk.v(51): near "end": syntax error, unexpected "end"
+# /user32/modelsim6.4c/modeltech/linux/vlog failed.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!run -all
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.
+Vl
+# invalid command name "Vl"
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# ** Error: timer_counter_tb_6p25maikurosec_clk.v(9): near "reg": syntax error, unexpected "reg", expecting ';' or ','
+# /user32/modelsim6.4c/modeltech/linux/vlog failed.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# ** Error: timer_counter_tb_6p25maikurosec_clk.v(9): near "reg": syntax error, unexpected "reg", expecting ';' or ','
+# /user32/modelsim6.4c/modeltech/linux/vlog failed.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!run -a
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+!ru
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.
+!vl
+# vlog timer_counter_tb_6p25maikurosec_clk.v 
+# Model Technology ModelSim SE vlog 6.4c Compiler 2008.12 Dec  8 2008
+# -- Compiling module timer_counter_tb
+# 
+# Top level modules:
+# 	timer_counter_tb
+!re
+# restart 
+# Loading work.timer_counter_tb
+
+!ru
+# run -all 
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /timer_counter_tb/timer_counter
+# Break key hit 
+# Simulation stop requested.

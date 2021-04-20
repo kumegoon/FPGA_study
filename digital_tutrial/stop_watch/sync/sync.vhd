@@ -16,10 +16,10 @@ end sync;
 
 architecture RTL of sync is
 
-  signal start_en1_reg      : std_logic;
-  signal start_en2_reg      : std_logic;
-  signal start_en1_equal_en2_w         : std_logic;
-  signal start_buf1_w       : std_logic;
+--  signal start_en1_reg      : std_logic;
+--  signal start_en2_reg      : std_logic;
+--  signal start_en1_equal_en2_w         : std_logic;
+--  signal start_buf1_w       : std_logic;
   signal start_buf1_reg     : std_logic;     -- out enable start
   signal start_buf2_reg     : std_logic;     -- out enable start
   signal start_up_edge_w    : std_logic;
@@ -38,30 +38,30 @@ architecture RTL of sync is
      O_START_EN  <= start_en_reg;
      O_CLR_EN    <= clear_out_buf_w;
 
-       process (I_CLK, I_RSTN) begin
-         if (I_RSTN  ='0')then
-           start_en1_reg  <=  '0';
-         elsif (I_CLK'event and I_CLK='1') then
-           start_en1_reg  <=  I_START_EN;
-         end if;
-       end process;           
+--       process (I_CLK, I_RSTN) begin
+--         if (I_RSTN  ='0')then
+--           start_en1_reg  <=  '0';
+--         elsif (I_CLK'event and I_CLK='1') then
+--           start_en1_reg  <=  I_START_EN;
+--         end if;
+--       end process;           
 
-       process (I_CLK, I_RSTN) begin
-         if (I_RSTN  ='0')then
-           start_en2_reg  <=  '0';
-         elsif (I_CLK'event and I_CLK='1') then
-           start_en2_reg  <=  start_en1_reg;
-         end if;
-       end process;           
+--       process (I_CLK, I_RSTN) begin
+--         if (I_RSTN  ='0')then
+--           start_en2_reg  <=  '0';
+--         elsif (I_CLK'event and I_CLK='1') then
+--           start_en2_reg  <=  start_en1_reg;
+--         end if;
+--       end process;           
 
-     start_en1_equal_en2_w  <=  '1' when(start_en1_reg = start_en2_reg) else '0';
-     start_buf1_w     <=  start_en2_reg when(start_en1_equal_en2_w = '1') else start_buf1_reg;
+--     start_en1_equal_en2_w  <=  '1' when(start_en1_reg = start_en2_reg) else '0';
+--     start_buf1_w     <=  start_en2_reg when(start_en1_equal_en2_w = '1') else start_buf1_reg;
 
        process (I_CLK, I_RSTN) begin
          if (I_RSTN  ='0')then
            start_buf1_reg  <=  '0';
          elsif (I_CLK'event and I_CLK='1') then
-           start_buf1_reg  <= start_buf1_w;
+           start_buf1_reg  <= I_START_EN;
          end if;
        end process;                
 
@@ -72,7 +72,6 @@ architecture RTL of sync is
            start_buf2_reg  <= start_buf1_reg;
          end if;
        end process;
-
 
       start_up_edge_w <= not start_buf2_reg and start_buf1_reg;
 
@@ -123,6 +122,6 @@ architecture RTL of sync is
          end if;
        end process;              
     
-       clear_out_buf_w <= clear_en_reg and not start_en_reg
+       clear_out_buf_w <= clear_en_reg and not start_en_reg;
     
     end RTL;    

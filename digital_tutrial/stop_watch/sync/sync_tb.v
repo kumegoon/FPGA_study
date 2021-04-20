@@ -23,24 +23,24 @@ end
 
 initial begin
 	I_RSTN = 0;
-	I_CLK=0;
+	I_CLK=1;
         I_START_EN=0;
         I_CLR_EN=0;
-   	#10
+   	#(10*CYCLE)
 	I_RSTN = 1;
-        #1
+        #(1*CYCLE)
         I_START_EN = 1;
-        #5
-	    I_START_EN = 0;
+        #(5*CYCLE)
+	I_START_EN = 0;
         I_CLR_EN =1;
-        #10
+        #(10*CYCLE)
         I_START_EN =1;
-        #10
+        #(10*CYCLE)
         I_START_EN = 0;
         I_CLR_EN =0;
-		#10
+	#(10*CYCLE)
         I_START_EN = 1;
-		#10
+	#(10*CYCLE)
         I_CLR_EN =1;
    
     	#(20*CYCLE) $finish;

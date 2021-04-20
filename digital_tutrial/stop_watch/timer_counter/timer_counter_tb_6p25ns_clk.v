@@ -1,11 +1,9 @@
 module timer_counter_tb;
 
 // parameter define
-parameter CYCLE 	= 6.25;		// 6.25ns
-parameter HALF_CYCLE 	= CYCLE/2;		// 6.25/2ns
-parameter MS_EN	= CYCLE*15;		// 1ms-1clk 
-parameter SEC_FLAG_EN = CYCLE * 159;	//1s-1clk
-parameter DELAY = 100;
+parameter CYCLE 	= 6250;		// 6250ns
+parameter HALF_CYCLE 	= CYCLE/2;	// 6250/2ns
+parameter MS_EN	= 15*CYCLE;		// 1ms-1clk 
 
 reg	I_RSTN, I_CLK, I_EN_1MS, I_CLEAR_EN, I_START_EN;
 reg 	SEC_FLAG;
@@ -36,19 +34,21 @@ end
 
 always begin
 	SEC_FLAG = 1'b0;
-	#1000000
+	#(16*CYCLE*1000)
 	SEC_FLAG =  1'b1;
-	#1000000
+	#(16*CYCLE*1000)
 	SEC_FLAG = 1'b0;
 end
 
 initial begin
 	I_RSTN = 0;
 	I_CLK=1;
-	#DELAY
+	#(10*CYCLE)
 	I_RSTN = 1;
 	I_START_EN = 1;
-	#60000000 $finish;
+	#(160000000*CYCLE)
+	I_RSTN = 1;
+	$finish;
 end
 
 endmodule

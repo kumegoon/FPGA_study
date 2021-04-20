@@ -1,8 +1,8 @@
 module sync_tb;
 
 // parameter define
-parameter CYCLE 	= 62500;		// 6.25us
-parameter HALF_CYCLE 	= CYCLE/2;		// 6.25us/2 
+parameter CYCLE 	= 25;		// 25ns
+parameter HALF_CYCLE 	= CYCLE/2;	// 25ns/2 
 parameter DELAY = 100;
 
 reg	I_RSTN, I_CLK, I_START_EN, I_CLR_EN;
@@ -22,6 +22,7 @@ always #(HALF_CYCLE) begin
 end
 
 initial begin
+	#DELAY
 	I_RSTN = 0;
 	I_CLK=0;
         I_START_EN=0;
@@ -36,6 +37,16 @@ initial begin
         #10
         I_START_EN =1;
         #10
+        I_START_EN = 0;
+        I_CLR_EN =0;
+        #100
+        I_START_EN = 1;
+        #100
+	I_START_EN = 0;
+        I_CLR_EN =1;
+        #100
+        I_START_EN =1;
+        #100
         I_START_EN = 0;
         I_CLR_EN =0;
    

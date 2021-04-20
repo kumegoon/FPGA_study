@@ -20,8 +20,7 @@ vsim work.stop_watch_top_tb
 # Loading work.clkdiv(rtl)
 # Loading work.sync(rtl)
 # Loading work.timer_counter(rtl)
-view wave
-# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
+do wave.do
 run -all
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
@@ -41,81 +40,10 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Note: $finish    : stop_watch_top_tb.v(34)
-#    Time: 8125 us  Iteration: 0  Instance: /stop_watch_top_tb
+# ** Note: $finish    : stop_watch_top_tb.v(46)
+#    Time: 769375 us  Iteration: 0  Instance: /stop_watch_top_tb
 # 1
-# Break in Module stop_watch_top_tb at stop_watch_top_tb.v line 34
-view wave
-# .main_pane.mdi.interior.cs.vm.paneset.cli_1.wf.clip.cs.pw.wf
-run -all
-# Break key hit 
-# Simulation stop requested.
-vcom -f rtl.list
-# Model Technology ModelSim SE vcom 6.4c Compiler 2008.12 Dec  8 2008
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Compiling entity clkdiv
-# -- Compiling architecture rtl of clkdiv
-# -- Compiling entity sync
-# -- Compiling architecture rtl of sync
-# -- Compiling entity timer_counter
-# -- Compiling architecture rtl of timer_counter
-# -- Compiling entity stop_watch_top
-# -- Compiling architecture rtl of stop_watch_top
-restart
-# Loading work.stop_watch_top(rtl)
-# Loading work.clkdiv(rtl)
-# Loading work.sync(rtl)
-# Loading work.timer_counter(rtl)
-run -all
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Note: $finish    : stop_watch_top_tb.v(34)
-#    Time: 8125 us  Iteration: 0  Instance: /stop_watch_top_tb
-# 1
-# Break in Module stop_watch_top_tb at stop_watch_top_tb.v line 34
-restart
-run -all
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_timer_counter
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ns  Iteration: 0  Instance: /stop_watch_top_tb/stop_watch_top/u_clkdiv
-# ** Note: $finish    : stop_watch_top_tb.v(34)
-#    Time: 8125 us  Iteration: 0  Instance: /stop_watch_top_tb
-# 1
-# Break in Module stop_watch_top_tb at stop_watch_top_tb.v line 34
+# Break in Module stop_watch_top_tb at stop_watch_top_tb.v line 46
 run -all
 # Break key hit 
 # Simulation stop requested.
