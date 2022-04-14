@@ -65,7 +65,7 @@ module KitchenTimer(clk, btn, sw, led, hled0, hled1, hled2, hled3);
     ucounter #(9) uc0(iclk[0], sw[0],bin[0],bout[0],dout0);
     ucounter #(5) uc1(iclk[1], 1'b0, bin[1],bout[1],dout1);
     ucounter #(9) uc2(iclk[2], 1'b0, bin[2],bout[2],dout1);
-    ucounter #(5) uc1(iclk[3], 1'b0, bin[3],bout[3],dout3);
+    ucounter #(5) uc3(iclk[3], 1'b0, bin[3],bout[3],dout3);
 
     //Hex outpu
     HexSegDec hs0(dout0, whex0);
