@@ -1,0 +1,299 @@
+|KitchenTimer
+clk => clk.IN4
+btn[0] => btn[0].IN1
+btn[1] => btn[1].IN1
+btn[2] => btn[2].IN1
+sw[0] => sw[0].IN1
+sw[1] => ~NO_FANOUT~
+sw[2] => ~NO_FANOUT~
+sw[3] => ~NO_FANOUT~
+sw[4] => ~NO_FANOUT~
+sw[5] => ~NO_FANOUT~
+sw[6] => ~NO_FANOUT~
+sw[7] => ~NO_FANOUT~
+sw[8] => ~NO_FANOUT~
+sw[9] => ~NO_FANOUT~
+led[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[8] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+led[9] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+hled0[0] <= HexSegDec:hs0.port1
+hled0[1] <= HexSegDec:hs0.port1
+hled0[2] <= HexSegDec:hs0.port1
+hled0[3] <= HexSegDec:hs0.port1
+hled0[4] <= HexSegDec:hs0.port1
+hled0[5] <= HexSegDec:hs0.port1
+hled0[6] <= HexSegDec:hs0.port1
+hled0[7] <= HexSegDec:hs0.port1
+hled1[0] <= HexSegDec:hs1.port1
+hled1[1] <= HexSegDec:hs1.port1
+hled1[2] <= HexSegDec:hs1.port1
+hled1[3] <= HexSegDec:hs1.port1
+hled1[4] <= HexSegDec:hs1.port1
+hled1[5] <= HexSegDec:hs1.port1
+hled1[6] <= HexSegDec:hs1.port1
+hled1[7] <= HexSegDec:hs1.port1
+hled2[0] <= HexSegDec:hs2.port1
+hled2[1] <= HexSegDec:hs2.port1
+hled2[2] <= HexSegDec:hs2.port1
+hled2[3] <= HexSegDec:hs2.port1
+hled2[4] <= HexSegDec:hs2.port1
+hled2[5] <= HexSegDec:hs2.port1
+hled2[6] <= HexSegDec:hs2.port1
+hled2[7] <= <GND>
+hled3[0] <= HexSegDec:hs3.port1
+hled3[1] <= HexSegDec:hs3.port1
+hled3[2] <= HexSegDec:hs3.port1
+hled3[3] <= HexSegDec:hs3.port1
+hled3[4] <= HexSegDec:hs3.port1
+hled3[5] <= HexSegDec:hs3.port1
+hled3[6] <= HexSegDec:hs3.port1
+hled3[7] <= HexSegDec:hs3.port1
+
+
+|KitchenTimer|unchatter:unc0
+din => dff.DATAIN
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+dout <= dff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|unchatter:unc1
+din => dff.DATAIN
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+dout <= dff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|unchatter:unc2
+din => dff.DATAIN
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+dout <= dff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|Timer:TM
+clk => rclk.CLK
+clk => cnt2[0].CLK
+clk => cnt2[1].CLK
+clk => cnt2[2].CLK
+clk => cnt2[3].CLK
+clk => cnt2[4].CLK
+clk => cnt2[5].CLK
+clk => cnt2[6].CLK
+clk => cnt2[7].CLK
+clk => cnt2[8].CLK
+clk => cnt2[9].CLK
+clk => cnt2[10].CLK
+clk => cnt2[11].CLK
+clk => cnt1[0].CLK
+clk => cnt1[1].CLK
+clk => cnt1[2].CLK
+clk => cnt1[3].CLK
+clk => cnt1[4].CLK
+clk => cnt1[5].CLK
+clk => cnt1[6].CLK
+clk => cnt1[7].CLK
+clk => cnt1[8].CLK
+clk => cnt1[9].CLK
+clk => cnt1[10].CLK
+clk => cnt1[11].CLK
+clk => cnt1[12].CLK
+clk => cnt1[13].CLK
+clk => cnt1[14].CLK
+clk => cnt1[15].CLK
+oclk <= rclk.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|ucounter:uc0
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|ucounter:uc1
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|ucounter:uc2
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|ucounter:uc3
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+nclr => cnt[0].ACLR
+nclr => cnt[1].ACLR
+nclr => cnt[2].ACLR
+nclr => cnt[3].ACLR
+cin => cout.IN1
+cin => cnt[0].ENA
+cin => cnt[3].ENA
+cin => cnt[2].ENA
+cin => cnt[1].ENA
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KitchenTimer|HexSegDec:hs0
+dat[0] => Decoder0.IN3
+dat[1] => Decoder0.IN2
+dat[2] => Decoder0.IN1
+dat[3] => Decoder0.IN0
+q[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= <VCC>
+
+
+|KitchenTimer|HexSegDec:hs1
+dat[0] => Decoder0.IN3
+dat[1] => Decoder0.IN2
+dat[2] => Decoder0.IN1
+dat[3] => Decoder0.IN0
+q[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= <VCC>
+
+
+|KitchenTimer|HexSegDec:hs2
+dat[0] => Decoder0.IN3
+dat[1] => Decoder0.IN2
+dat[2] => Decoder0.IN1
+dat[3] => Decoder0.IN0
+q[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= <VCC>
+
+
+|KitchenTimer|HexSegDec:hs3
+dat[0] => Decoder0.IN3
+dat[1] => Decoder0.IN2
+dat[2] => Decoder0.IN1
+dat[3] => Decoder0.IN0
+q[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= <VCC>
+
+
